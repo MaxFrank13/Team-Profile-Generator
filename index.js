@@ -3,7 +3,7 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { managerQuestions, internQuestions, engineerQuestions } = require('./lib/questions')
+const { managerQuestions, internQuestions, engineerQuestions } = require('./src/questions')
 
 const teamProfile = [];
 
@@ -36,44 +36,10 @@ function promptLoop(addMember) {
                 });
             break;
         case "No, that's the whole squad!":
-            const page = generateHtml();
-            fs.writeFile('./dist/index.html', page, (err) => err ? console.error(err) : console.log('Success!'));
+            fs.writeFile('./dist/index.html', generateHtml(), (err) => err ? console.error(err) : console.log('Success!'));
             break;
     }
 }
-
-const testTeam = [
-    {
-      name: 'Bill',
-      id: '1',
-      email: 'bill@billsboxes.com',
-      officeNumber: '225'
-    },
-    {
-      name: 'Adam',
-      id: '2',
-      email: 'adam@adamsapple.com',
-      github: 'adamshub'
-    },
-    {
-      name: 'Maxwell',
-      id: '3',
-      email: 'swellius@malone.com',
-      school: 'UNH'
-    },
-    {
-      name: 'Meriadoc',
-      id: '4',
-      email: 'merry@hobbiton.com',
-      school: 'UNH'
-    },
-    {
-      name: 'Gandalf',
-      id: '5',
-      email: 'getwizzywithit@istari.com',
-      github: 'TheRealWhiteWizard'
-    }
-  ]
 
 function generateHtml(){
     return `
@@ -89,7 +55,7 @@ function generateHtml(){
 </head>
 <body>
     <header>
-        <h1>Team Profile</h1>
+        <h1>${teamProfile[0].name}'s Team</h1>
     </header>
     <main>${generateCards(teamProfile)}
     </main>
