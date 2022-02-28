@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url(../src/backgroundtexture.jpg) center;
+    background: radial-gradient(#e7e7e7eb, #030348b0), url(../src/backgroundtexture.jpg) center;
 }
 
 header {
@@ -47,7 +47,7 @@ main {
     text-transform: capitalize;
 }
 .manager {
-    background: radial-gradient(rgb(183 1 255), rgb(108 58 189 / 81%));
+    background: radial-gradient(rgb(228 0 255), rgb(157 58 189 / 60%));
 }
 .engineer {
     background: radial-gradient(rgb(18 153 18), rgb(0 255 200 / 72%));
