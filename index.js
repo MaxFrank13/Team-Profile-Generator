@@ -79,7 +79,7 @@ function generateCards(team){
                  member.getGithub()}
             </section>
         </section>`
-    }).reduce((prev, current) => prev + current);
+    }).join("");
 }
 
 init();
