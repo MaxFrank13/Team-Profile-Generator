@@ -18,4 +18,4 @@ Use this app to generate team profiles for any software engineering squad!
 
 ### Contribute & Contact
 
-Feel free to fork the repo and use it for your own. I can be contacted at any of the links provided on [my portfolio](http://franklymaxwell.com)
+Feel free to fork the repo and use it for your own. I can be contacted at any of the links provided on [my portfolio](http://franklymaxwell.com).
